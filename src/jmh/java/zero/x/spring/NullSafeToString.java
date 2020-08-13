@@ -74,11 +74,10 @@ public class NullSafeToString {
             Arrays.fill(array, (byte) 1);
         }
 
-        if (array == null) {
-            return "null";
-        }
-
         String inter = Arrays.toString(array);
+        if ("null".equals(inter)) {
+            return inter;
+        }
         return "{" + inter.substring(1, inter.length() - 1) + "}";
 
     }
