@@ -74,7 +74,11 @@ public class NullSafeToString {
             Arrays.fill(array, (byte) 1);
         }
 
-        String inter = Arrays.toString(array);
+        return innerNullSafeToString(Arrays.toString(array));
+
+    }
+
+    private String innerNullSafeToString(String inter){
         if ("null".equals(inter)) {
             return inter;
         }
@@ -82,7 +86,6 @@ public class NullSafeToString {
             return "{}";
         }
         return "{" + inter.substring(1, inter.length() - 1) + "}";
-
     }
 
 }
