@@ -78,6 +78,9 @@ public class NullSafeToString {
         if ("null".equals(inter)) {
             return inter;
         }
+        if ("[]".equals(inter)) {
+            return "{}";
+        }
         return "{" + inter.substring(1, inter.length() - 1) + "}";
 
     }
