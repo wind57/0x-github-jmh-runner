@@ -15,6 +15,9 @@ dependencies {
     implementation 'org.openjdk.jmh:jmh-core:1.24'
     implementation 'org.openjdk.jmh:jmh-generator-annprocess:1.24'
 
+    implementation 'com.google.guava:guava:29.0-jre'
+
+
     compile 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
@@ -64,7 +67,7 @@ dependencies {
 
 // https://docs.gradle.org/current/dsl/org.gradle.api.tasks.JavaExec.html
 task jmh(type: JavaExec, dependsOn: jmhClasses) {
-    main = 'zero.x.spring.NullSafeToString'
+    main = 'zero.x.so.DifferentConcats'
     classpath = sourceSets.jmh.compileClasspath + sourceSets.jmh.runtimeClasspath
     args("version", "$project.version")
 }
