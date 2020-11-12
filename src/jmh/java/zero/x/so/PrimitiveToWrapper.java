@@ -37,15 +37,15 @@ public class PrimitiveToWrapper {
     public static class InnerScope {
 
         static final Map<Integer, Class<?>> MAP = Map.of(
-            1, int.class,
-            2, long.class,
-            3, boolean.class,
-            4, byte.class,
-            5, char.class,
-            6, float.class,
-            7, double.class,
-            8, short.class,
-            9, void.class
+            0, int.class,
+            1, long.class,
+            2, boolean.class,
+            3, byte.class,
+            4, char.class,
+            5, float.class,
+            6, double.class,
+            7, short.class,
+            8, void.class
         );
 
         Class<?> clazz;
