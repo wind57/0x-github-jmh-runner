@@ -50,7 +50,7 @@ public class PrimitiveToWrapper {
 
         Class<?> clazz;
 
-        @Setup(Level.Iteration)
+        @Setup(Level.Invocation)
         public void setUp() {
             int index = ThreadLocalRandom.current().ints(0, 9).findFirst().orElse(-1);
             clazz = MAP.get(index);
