@@ -67,7 +67,7 @@ dependencies {
 
 // https://docs.gradle.org/current/dsl/org.gradle.api.tasks.JavaExec.html
 task jmh(type: JavaExec, dependsOn: jmhClasses) {
-    main = 'zero.x.so.PrimitiveToWrapper'
+    main = 'zero.x.spring.SystemGetEnvVsPath'
     classpath = sourceSets.jmh.compileClasspath + sourceSets.jmh.runtimeClasspath
     args("version", "$project.version")
 }
