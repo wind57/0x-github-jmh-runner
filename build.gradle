@@ -21,10 +21,10 @@ dependencies {
     //compile 'org.projectlombok:lombok:1.18.12'
     //annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.7.0-M1'
-    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.7.0-M1'
-    testCompileOnly 'org.projectlombok:lombok:1.18.12'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+    //testCompile 'org.junit.jupiter:junit-jupiter-api:5.7.0-M1'
+    //testCompile 'org.junit.jupiter:junit-jupiter-engine:5.7.0-M1'
+    //testCompileOnly 'org.projectlombok:lombok:1.18.12'
+    //testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
 }
 
 test {
