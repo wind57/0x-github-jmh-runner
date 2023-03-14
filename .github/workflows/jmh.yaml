@@ -21,7 +21,7 @@ jobs:
       shell: bash
       run: |
         
-        if [[ -z "${GITHUB_BASE_REF}" ]]; then
+        if [[ -z $GITHUB_BASE_REF ]]; then
           echo "This is a PR to branch : "GITHUB_BASE_REF"
         fi
 
