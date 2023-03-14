@@ -21,9 +21,9 @@ jobs:
       shell: bash
       run: |
         
-        $GITHUB_BASE_REF
-        if [[ ! -z $GITHUB_BASE_REF ]]; then
-          echo "This is a PR to branch : $GITHUB_BASE_REF"
+        baseRef=$GITHUB_BASE_REF
+        if [[ ! -z $baseRef ]]; then
+          echo "This is a PR to branch : $baseRef"
         fi
 
 #        raw=$(git branch -r --contains ${{ github.ref }})
