@@ -20,14 +20,19 @@ jobs:
     - name: test
       shell: bash
       run: |
-        raw=$(git branch -r --contains ${{ github.ref }})
-        echo "raw: $raw"
-        echo "${{ github.event.base_ref }}"
-        echo "test : -> ${{ github.event.base_ref }}"
-        echo "test2 : -> $GITHUB_BASE_REF"
-        echo "BRANCH_NAME=$(echo $GITHUB_HEAD_REF)" >> $GITHUB_ENV
-        echo "BASE_BRANCH_NAME=$(echo $GITHUB_BASE_REF)" >> $GITHUB_ENV
-        echo "DOCKER_IMAGES_KEY=$(echo $GITHUB_RUN_ID)" >> $GITHUB_ENV
+        
+        if [[ -z "${GITHUB_BASE_REF}" ]] then
+          echo "This is a PR to branch : "GITHUB_BASE_REF"
+        fi
+
+#        raw=$(git branch -r --contains ${{ github.ref }})
+#        echo "raw: $raw"
+#        echo "${{ github.event.base_ref }}"
+#        echo "test : -> ${{ github.event.base_ref }}"
+#        echo "test2 : -> $GITHUB_BASE_REF"
+#        echo "BRANCH_NAME=$(echo $GITHUB_HEAD_REF)" >> $GITHUB_ENV
+#        echo "BASE_BRANCH_NAME=$(echo $GITHUB_BASE_REF)" >> $GITHUB_ENV
+#        echo "DOCKER_IMAGES_KEY=$(echo $GITHUB_RUN_ID)" >> $GITHUB_ENV
 
 #    - name: Set up JDK 14
 #      uses: actions/setup-java@v1
