@@ -22,13 +22,15 @@ jobs:
       run: |
         
         baseRef=$GITHUB_BASE_REF
-        if [[ ! -z $baseRef ]]; then
+          if [[ ! -z $baseRef ]]; then
           echo "This is a PR to branch : $baseRef"
           echo "BASE_BRANCH=$(echo $baseRef)" >> $GITHUB_ENV
         
         else 
           raw=${{ github.ref }}
           echo "${raw}"
+          branch=${raw##*/}
+          echo "${branch}"
         
         fi
 
