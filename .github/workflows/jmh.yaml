@@ -23,7 +23,7 @@ jobs:
         
         baseRef=$GITHUB_BASE_REF
         echo "${baseRef}"
-        if [[ -z "${baseRef}" ]]; then
+        if [[ -z $baseRef ]]; then
           echo "This is a PR to branch : $GITHUB_BASE_REF"
         fi
 
